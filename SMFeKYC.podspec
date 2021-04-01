@@ -9,10 +9,10 @@ Pod::Spec.new do |s|
   s.source = { :git => "https://github.com/AnhLTVietapps/SMFeKYC2.git", :branch => "main" }
   s.dependency 'Alamofire',  '5.4.1'
 
-  s.ios.deployment_target = '10'
+  s.ios.deployment_target = '11'
 
   s.swift_versions = ['5.3']
 
-  s.vendored_frameworks = ['SMFeKYC.framework']
+  s.vendored_frameworks = ['SMFeKYC.framework', 'FaceTecSDK.framework', 'TrueIDSDK.framework']
 
 end

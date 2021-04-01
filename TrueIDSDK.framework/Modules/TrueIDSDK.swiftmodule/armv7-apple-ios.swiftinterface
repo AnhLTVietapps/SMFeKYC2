@@ -1,0 +1,140 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target armv7-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name TrueIDSDK
+import AVFoundation
+import FaceTecSDK
+import Foundation
+import LocalAuthentication
+import Swift
+@_exported import TrueIDSDK
+import UIKit
+@objc public class CheckingRecord : ObjectiveC.NSObject {
+  @objc public var name: Swift.String
+  @objc public var message: Swift.String
+  @objc public var type: TrueIDSDK.DetectionType
+  @objc public var status: Swift.Bool
+  public init(name: Swift.String, message: Swift.String, type: TrueIDSDK.DetectionType, status: Swift.Bool)
+  public func toMap() -> [Swift.String : Any]
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class ConfigInfo : ObjectiveC.NSObject {
+  @objc public var domain: Swift.String!
+  @objc public var domainPath: Swift.String!
+  @objc public var authDomain: Swift.String!
+  @objc public var authDomainPath: Swift.String!
+  @objc public var appId: Swift.String!
+  @objc public var appSecret: Swift.String!
+  @objc public var zoomLicenseKey: Swift.String!
+  @objc public var zoomServerBaseURL: Swift.String!
+  @objc public var zoomPublicKey: Swift.String!
+  @objc convenience public init(domain: Swift.String, domainPath: Swift.String, authDomain: Swift.String, authDomainPath: Swift.String, appId: Swift.String, appSecret: Swift.String)
+  @objc public init(domain: Swift.String, domainPath: Swift.String, authDomain: Swift.String, authDomainPath: Swift.String, appId: Swift.String, appSecret: Swift.String, zoomLicenseKey: Swift.String, zoomServerBaseURL: Swift.String, zoomPublicKey: Swift.String)
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc public class Person : ObjectiveC.NSObject {
+  @objc public var idNumber: Swift.String
+  @objc public var gender: Swift.String
+  @objc public var dob: Swift.String
+  @objc public var fullname: Swift.String
+  @objc public var address: Swift.String
+  @objc public var doi: Swift.String
+  @objc public var givenPlace: Swift.String
+  @objc public var origin: Swift.String
+  @objc public var dueDate: Swift.String
+  @objc public var selfie: UIKit.UIImage?
+  public init(idNumber: Swift.String, gender: Swift.String, dob: Swift.String, fullname: Swift.String, address: Swift.String, doi: Swift.String, givenPlace: Swift.String, origin: Swift.String, dueDate: Swift.String)
+  public func toMap() -> [Swift.String : Any]
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AccessToken : ObjectiveC.NSObject {
+  @objc public init(access_token: Swift.String, expires_in: Swift.Int, refresh_token: Swift.String, token_type: Swift.String, ekyc_api_url: Swift.String)
+  @objc deinit
+}
+@objc public enum typeProcessCheck : ObjectiveC.NSInteger {
+  case ocr = 0
+  case facematching = 1
+  case liveness = 2
+  case finished = 3
+  public typealias RawValue = ObjectiveC.NSInteger
+  public init?(rawValue: ObjectiveC.NSInteger)
+  public var rawValue: ObjectiveC.NSInteger {
+    get
+  }
+}
+@objc public enum LivenessDetectionMode : ObjectiveC.NSInteger {
+  case none = 0
+  case active = 1
+  case passLiveness = 2
+  case passive = 3
+  public typealias RawValue = ObjectiveC.NSInteger
+  public var rawValue: ObjectiveC.NSInteger {
+    get
+  }
+  public init?(rawValue: ObjectiveC.NSInteger)
+}
+@_hasMissingDesignatedInitializers @objc public class StepInfo : ObjectiveC.NSObject {
+  @objc public var type: Swift.String?
+  @objc public var data: Swift.String?
+  @objc deinit
+  @objc override dynamic public init()
+}
+public typealias TrueIDListener = (TrueIDSDK.CardInfo) -> ()
+public typealias TrueIDStepListener = (TrueIDSDK.StepInfo) -> ()
+@_inheritsConvenienceInitializers @objc public class TrueID : ObjectiveC.NSObject {
+  @objc public static func configure(configInfo: TrueIDSDK.ConfigInfo)
+  @objc public static func start(listener: @escaping TrueIDSDK.TrueIDListener)
+  @objc public static func newRequest(token: TrueIDSDK.AccessToken, requestID: Swift.String)
+  @objc public static func newRequest(token: Swift.String, requestID: Swift.String, endpoint: Swift.String)
+  @objc public static func captureFront(listener: @escaping TrueIDSDK.TrueIDListener)
+  @objc public static func captureBack(listener: @escaping TrueIDSDK.TrueIDListener)
+  @objc public static func captureSelfie(listener: @escaping TrueIDSDK.TrueIDListener)
+  @objc public static func captureSubmit(listener: @escaping TrueIDSDK.TrueIDListener)
+  @objc public static func requestId() -> Swift.String
+  @objc public static func setLanguage(language: Swift.String)
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc public class DaiNamToken : ObjectiveC.NSObject {
+  @objc public var access_token: Swift.String
+  @objc public var expires_in: Swift.String
+  @objc public var refresh_token: Swift.String
+  @objc public var token_type: Swift.String
+  @objc public var ekyc_api_url: Swift.String
+  @objc public init(access_token: Swift.String, expires_in: Swift.String, refresh_token: Swift.String, token_type: Swift.String, ekyc_api_url: Swift.String)
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc public enum DetectionType : Swift.Int {
+  case ocrScan = 0
+  case livenessDetection = 1
+  case faceComparision = 2
+  case idVerification = 3
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+  public init?(rawValue: Swift.Int)
+}
+@_hasMissingDesignatedInitializers @objc public class CardInfo : ObjectiveC.NSObject {
+  @objc public var person: TrueIDSDK.Person?
+  @objc public var frontCardImage: UIKit.UIImage?
+  @objc public var backCardImage: UIKit.UIImage?
+  @objc public var selfieImage: UIKit.UIImage?
+  @objc public var result: [Swift.String : Any]?
+  @objc public func getRecord(type: TrueIDSDK.DetectionType) -> TrueIDSDK.CheckingRecord?
+  @objc public func toMap() -> [Swift.String : Any]
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension TrueIDSDK.typeProcessCheck : Swift.Equatable {}
+extension TrueIDSDK.typeProcessCheck : Swift.Hashable {}
+extension TrueIDSDK.typeProcessCheck : Swift.RawRepresentable {}
+extension TrueIDSDK.LivenessDetectionMode : Swift.Equatable {}
+extension TrueIDSDK.LivenessDetectionMode : Swift.Hashable {}
+extension TrueIDSDK.LivenessDetectionMode : Swift.RawRepresentable {}
+extension TrueIDSDK.DetectionType : Swift.Equatable {}
+extension TrueIDSDK.DetectionType : Swift.Hashable {}
+extension TrueIDSDK.DetectionType : Swift.RawRepresentable {}
