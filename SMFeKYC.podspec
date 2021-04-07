@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.source = { :git => "https://github.com/AnhLTVietapps/SMFeKYC2.git", :branch => "main" }
   s.dependency 'Alamofire',  '5.4.1'
 
-  s.ios.deployment_target = '11'
+  s.ios.deployment_target = '10'
 
   s.swift_versions = ['5.3']
 
