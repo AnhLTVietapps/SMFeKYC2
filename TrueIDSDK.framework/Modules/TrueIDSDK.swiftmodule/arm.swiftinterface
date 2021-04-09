@@ -8,6 +8,15 @@ import LocalAuthentication
 import Swift
 @_exported import TrueIDSDK
 import UIKit
+@objc public class ResultVerify : ObjectiveC.NSObject {
+  @objc public var code: Swift.Int
+  @objc public var message: Swift.String
+  @objc public var faceSelfieToken: Swift.String
+  public init(code: Swift.Int, message: Swift.String, faceSelfieToken: Swift.String)
+  public func toMap() -> [Swift.String : Any]
+  @objc deinit
+  @objc override dynamic public init()
+}
 @objc public class CheckingRecord : ObjectiveC.NSObject {
   @objc public var name: Swift.String
   @objc public var message: Swift.String
@@ -46,8 +55,8 @@ import UIKit
   @objc public var selfie: UIKit.UIImage?
   public init(idNumber: Swift.String, gender: Swift.String, dob: Swift.String, fullname: Swift.String, address: Swift.String, doi: Swift.String, givenPlace: Swift.String, origin: Swift.String, dueDate: Swift.String)
   public func toMap() -> [Swift.String : Any]
-  @objc override dynamic public init()
   @objc deinit
+  @objc override dynamic public init()
 }
 @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers public class AccessToken : ObjectiveC.NSObject {
   @objc public init(access_token: Swift.String, expires_in: Swift.Int, refresh_token: Swift.String, token_type: Swift.String, ekyc_api_url: Swift.String)
@@ -124,6 +133,7 @@ public typealias TrueIDStepListener = (TrueIDSDK.StepInfo) -> ()
   @objc public var backCardImage: UIKit.UIImage?
   @objc public var selfieImage: UIKit.UIImage?
   @objc public var result: [Swift.String : Any]?
+  @objc public var resultVerify: TrueIDSDK.ResultVerify?
   @objc public func getRecord(type: TrueIDSDK.DetectionType) -> TrueIDSDK.CheckingRecord?
   @objc public func toMap() -> [Swift.String : Any]
   @objc override dynamic public init()
