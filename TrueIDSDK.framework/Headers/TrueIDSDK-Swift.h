@@ -218,6 +218,7 @@ SWIFT_CLASS("_TtC9TrueIDSDK11AccessToken")
 
 @class Person;
 @class UIImage;
+@class ResultVerify;
 enum DetectionType : NSInteger;
 @class CheckingRecord;
 
@@ -228,6 +229,7 @@ SWIFT_CLASS("_TtC9TrueIDSDK8CardInfo")
 @property (nonatomic, strong) UIImage * _Nullable backCardImage;
 @property (nonatomic, strong) UIImage * _Nullable selfieImage;
 @property (nonatomic, copy) NSDictionary<NSString *, id> * _Nullable result;
+@property (nonatomic, strong) ResultVerify * _Nullable resultVerify;
 - (CheckingRecord * _Nullable)getRecordWithType:(enum DetectionType)type SWIFT_WARN_UNUSED_RESULT;
 - (NSDictionary<NSString *, id> * _Nonnull)toMap SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -303,6 +305,16 @@ SWIFT_CLASS("_TtC9TrueIDSDK6Person")
 @property (nonatomic, copy) NSString * _Nonnull origin;
 @property (nonatomic, copy) NSString * _Nonnull dueDate;
 @property (nonatomic, strong) UIImage * _Nullable selfie;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC9TrueIDSDK12ResultVerify")
+@interface ResultVerify : NSObject
+@property (nonatomic) NSInteger code;
+@property (nonatomic, copy) NSString * _Nonnull message;
+@property (nonatomic, copy) NSString * _Nonnull faceSelfieToken;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
@@ -568,6 +580,7 @@ SWIFT_CLASS("_TtC9TrueIDSDK11AccessToken")
 
 @class Person;
 @class UIImage;
+@class ResultVerify;
 enum DetectionType : NSInteger;
 @class CheckingRecord;
 
@@ -578,6 +591,7 @@ SWIFT_CLASS("_TtC9TrueIDSDK8CardInfo")
 @property (nonatomic, strong) UIImage * _Nullable backCardImage;
 @property (nonatomic, strong) UIImage * _Nullable selfieImage;
 @property (nonatomic, copy) NSDictionary<NSString *, id> * _Nullable result;
+@property (nonatomic, strong) ResultVerify * _Nullable resultVerify;
 - (CheckingRecord * _Nullable)getRecordWithType:(enum DetectionType)type SWIFT_WARN_UNUSED_RESULT;
 - (NSDictionary<NSString *, id> * _Nonnull)toMap SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -653,6 +667,16 @@ SWIFT_CLASS("_TtC9TrueIDSDK6Person")
 @property (nonatomic, copy) NSString * _Nonnull origin;
 @property (nonatomic, copy) NSString * _Nonnull dueDate;
 @property (nonatomic, strong) UIImage * _Nullable selfie;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
+SWIFT_CLASS("_TtC9TrueIDSDK12ResultVerify")
+@interface ResultVerify : NSObject
+@property (nonatomic) NSInteger code;
+@property (nonatomic, copy) NSString * _Nonnull message;
+@property (nonatomic, copy) NSString * _Nonnull faceSelfieToken;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
 + (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
 @end
