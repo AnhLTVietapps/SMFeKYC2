@@ -259,6 +259,7 @@ SWIFT_CLASS("_TtC9TrueIDSDK10ConfigInfo")
 @property (nonatomic, copy) NSString * _Null_unspecified zoomLicenseKey;
 @property (nonatomic, copy) NSString * _Null_unspecified zoomServerBaseURL;
 @property (nonatomic, copy) NSString * _Null_unspecified zoomPublicKey;
+- (nonnull instancetype)initWithAppId:(NSString * _Nonnull)appId appSecret:(NSString * _Nonnull)appSecret;
 - (nonnull instancetype)initWithDomain:(NSString * _Nonnull)domain domainPath:(NSString * _Nonnull)domainPath authDomain:(NSString * _Nonnull)authDomain authDomainPath:(NSString * _Nonnull)authDomainPath appId:(NSString * _Nonnull)appId appSecret:(NSString * _Nonnull)appSecret;
 - (nonnull instancetype)initWithDomain:(NSString * _Nonnull)domain domainPath:(NSString * _Nonnull)domainPath authDomain:(NSString * _Nonnull)authDomain authDomainPath:(NSString * _Nonnull)authDomainPath appId:(NSString * _Nonnull)appId appSecret:(NSString * _Nonnull)appSecret zoomLicenseKey:(NSString * _Nonnull)zoomLicenseKey zoomServerBaseURL:(NSString * _Nonnull)zoomServerBaseURL zoomPublicKey:(NSString * _Nonnull)zoomPublicKey OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;
@@ -621,6 +622,7 @@ SWIFT_CLASS("_TtC9TrueIDSDK10ConfigInfo")
 @property (nonatomic, copy) NSString * _Null_unspecified zoomLicenseKey;
 @property (nonatomic, copy) NSString * _Null_unspecified zoomServerBaseURL;
 @property (nonatomic, copy) NSString * _Null_unspecified zoomPublicKey;
+- (nonnull instancetype)initWithAppId:(NSString * _Nonnull)appId appSecret:(NSString * _Nonnull)appSecret;
 - (nonnull instancetype)initWithDomain:(NSString * _Nonnull)domain domainPath:(NSString * _Nonnull)domainPath authDomain:(NSString * _Nonnull)authDomain authDomainPath:(NSString * _Nonnull)authDomainPath appId:(NSString * _Nonnull)appId appSecret:(NSString * _Nonnull)appSecret;
 - (nonnull instancetype)initWithDomain:(NSString * _Nonnull)domain domainPath:(NSString * _Nonnull)domainPath authDomain:(NSString * _Nonnull)authDomain authDomainPath:(NSString * _Nonnull)authDomainPath appId:(NSString * _Nonnull)appId appSecret:(NSString * _Nonnull)appSecret zoomLicenseKey:(NSString * _Nonnull)zoomLicenseKey zoomServerBaseURL:(NSString * _Nonnull)zoomServerBaseURL zoomPublicKey:(NSString * _Nonnull)zoomPublicKey OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)init SWIFT_UNAVAILABLE;

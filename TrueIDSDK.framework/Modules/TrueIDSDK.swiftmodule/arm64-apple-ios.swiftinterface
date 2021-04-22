@@ -37,6 +37,7 @@ import UIKit
   @objc public var zoomLicenseKey: Swift.String!
   @objc public var zoomServerBaseURL: Swift.String!
   @objc public var zoomPublicKey: Swift.String!
+  @objc convenience public init(appId: Swift.String, appSecret: Swift.String)
   @objc convenience public init(domain: Swift.String, domainPath: Swift.String, authDomain: Swift.String, authDomainPath: Swift.String, appId: Swift.String, appSecret: Swift.String)
   @objc public init(domain: Swift.String, domainPath: Swift.String, authDomain: Swift.String, authDomainPath: Swift.String, appId: Swift.String, appSecret: Swift.String, zoomLicenseKey: Swift.String, zoomServerBaseURL: Swift.String, zoomPublicKey: Swift.String)
   @objc deinit
