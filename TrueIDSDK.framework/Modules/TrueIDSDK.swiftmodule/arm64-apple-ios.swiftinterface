@@ -43,6 +43,20 @@ import UIKit
   @objc deinit
   @objc override dynamic public init()
 }
+@objc public class ConfigColor : ObjectiveC.NSObject {
+  @objc public var outerBackgroundColor: Swift.String
+  @objc public var frameColor: Swift.String
+  @objc public var borderColor: Swift.String
+  @objc public var ovalColor: Swift.String
+  @objc public var dualSpinnerColor: Swift.String
+  @objc public var textColor: Swift.String
+  @objc public var buttonAndFeedbackBarColor: Swift.String
+  @objc public var buttonAndFeedbackBarTextColor: Swift.String
+  @objc public var buttonColorPressed: Swift.String
+  public init(outerBackgroundColor: Swift.String, frameColor: Swift.String, borderColor: Swift.String, ovalColor: Swift.String, dualSpinnerColor: Swift.String, textColor: Swift.String, buttonAndFeedbackBarColor: Swift.String, buttonAndFeedbackBarTextColor: Swift.String, buttonColorPressed: Swift.String)
+  @objc deinit
+  @objc override dynamic public init()
+}
 @objc public class Person : ObjectiveC.NSObject {
   @objc public var idNumber: Swift.String
   @objc public var gender: Swift.String
@@ -94,7 +108,7 @@ import UIKit
 public typealias TrueIDListener = (TrueIDSDK.CardInfo) -> ()
 public typealias TrueIDStepListener = (TrueIDSDK.StepInfo) -> ()
 @_inheritsConvenienceInitializers @objc public class TrueID : ObjectiveC.NSObject {
-  @objc public static func configure(configInfo: TrueIDSDK.ConfigInfo)
+  @objc public static func configure(configInfo: TrueIDSDK.ConfigInfo, configColor: TrueIDSDK.ConfigColor)
   @objc public static func start(listener: @escaping TrueIDSDK.TrueIDListener)
   @objc public static func newRequest(token: TrueIDSDK.AccessToken, requestID: Swift.String)
   @objc public static func newRequest(token: Swift.String, requestID: Swift.String, endpoint: Swift.String)

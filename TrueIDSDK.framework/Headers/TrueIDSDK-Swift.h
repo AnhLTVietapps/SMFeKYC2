@@ -248,6 +248,22 @@ SWIFT_CLASS("_TtC9TrueIDSDK14CheckingRecord")
 @end
 
 
+SWIFT_CLASS("_TtC9TrueIDSDK11ConfigColor")
+@interface ConfigColor : NSObject
+@property (nonatomic, copy) NSString * _Nonnull outerBackgroundColor;
+@property (nonatomic, copy) NSString * _Nonnull frameColor;
+@property (nonatomic, copy) NSString * _Nonnull borderColor;
+@property (nonatomic, copy) NSString * _Nonnull ovalColor;
+@property (nonatomic, copy) NSString * _Nonnull dualSpinnerColor;
+@property (nonatomic, copy) NSString * _Nonnull textColor;
+@property (nonatomic, copy) NSString * _Nonnull buttonAndFeedbackBarColor;
+@property (nonatomic, copy) NSString * _Nonnull buttonAndFeedbackBarTextColor;
+@property (nonatomic, copy) NSString * _Nonnull buttonColorPressed;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC9TrueIDSDK10ConfigInfo")
 @interface ConfigInfo : NSObject
 @property (nonatomic, copy) NSString * _Null_unspecified domain;
@@ -332,7 +348,7 @@ SWIFT_CLASS("_TtC9TrueIDSDK8StepInfo")
 
 SWIFT_CLASS("_TtC9TrueIDSDK6TrueID")
 @interface TrueID : NSObject
-+ (void)configureWithConfigInfo:(ConfigInfo * _Nonnull)configInfo;
++ (void)configureWithConfigInfo:(ConfigInfo * _Nonnull)configInfo configColor:(ConfigColor * _Nonnull)configColor;
 + (void)startWithListener:(void (^ _Nonnull)(CardInfo * _Nonnull))listener;
 + (void)newRequestWithToken:(AccessToken * _Nonnull)token requestID:(NSString * _Nonnull)requestID;
 + (void)newRequestWithToken:(NSString * _Nonnull)token requestID:(NSString * _Nonnull)requestID endpoint:(NSString * _Nonnull)endpoint;
@@ -611,6 +627,22 @@ SWIFT_CLASS("_TtC9TrueIDSDK14CheckingRecord")
 @end
 
 
+SWIFT_CLASS("_TtC9TrueIDSDK11ConfigColor")
+@interface ConfigColor : NSObject
+@property (nonatomic, copy) NSString * _Nonnull outerBackgroundColor;
+@property (nonatomic, copy) NSString * _Nonnull frameColor;
+@property (nonatomic, copy) NSString * _Nonnull borderColor;
+@property (nonatomic, copy) NSString * _Nonnull ovalColor;
+@property (nonatomic, copy) NSString * _Nonnull dualSpinnerColor;
+@property (nonatomic, copy) NSString * _Nonnull textColor;
+@property (nonatomic, copy) NSString * _Nonnull buttonAndFeedbackBarColor;
+@property (nonatomic, copy) NSString * _Nonnull buttonAndFeedbackBarTextColor;
+@property (nonatomic, copy) NSString * _Nonnull buttonColorPressed;
+- (nonnull instancetype)init SWIFT_UNAVAILABLE;
++ (nonnull instancetype)new SWIFT_UNAVAILABLE_MSG("-init is unavailable");
+@end
+
+
 SWIFT_CLASS("_TtC9TrueIDSDK10ConfigInfo")
 @interface ConfigInfo : NSObject
 @property (nonatomic, copy) NSString * _Null_unspecified domain;
@@ -695,7 +727,7 @@ SWIFT_CLASS("_TtC9TrueIDSDK8StepInfo")
 
 SWIFT_CLASS("_TtC9TrueIDSDK6TrueID")
 @interface TrueID : NSObject
-+ (void)configureWithConfigInfo:(ConfigInfo * _Nonnull)configInfo;
++ (void)configureWithConfigInfo:(ConfigInfo * _Nonnull)configInfo configColor:(ConfigColor * _Nonnull)configColor;
 + (void)startWithListener:(void (^ _Nonnull)(CardInfo * _Nonnull))listener;
 + (void)newRequestWithToken:(AccessToken * _Nonnull)token requestID:(NSString * _Nonnull)requestID;
 + (void)newRequestWithToken:(NSString * _Nonnull)token requestID:(NSString * _Nonnull)requestID endpoint:(NSString * _Nonnull)endpoint;
